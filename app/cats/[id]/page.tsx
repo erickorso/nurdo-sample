@@ -5,11 +5,14 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-interface CatDetailPageProps {
-    current?: object;
+interface CurrentProps {
+    id: string,
+    url: string,
+    width: number,
+    height: number
 }
 
-const CatDetailPage = ({ current }: CatDetailPageProps) => {
+const CatDetailPage = ({ current }: { current?: CurrentProps}) => {
     const params = useParams<{ id: string }>();
     const currentCat = JSON.parse(localStorage.getItem("currentCat") || "{}");
     const router = useRouter();
