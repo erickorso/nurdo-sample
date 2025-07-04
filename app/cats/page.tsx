@@ -43,7 +43,7 @@ const CatPage = () => {
         router.push(`/cats/${id}`);
     };
     useEffect(() => {
-        fetchCats(currentPage)
+        fetchCats(currentPage);
     }, [currentPage])
 
     return (

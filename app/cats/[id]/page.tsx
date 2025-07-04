@@ -6,7 +6,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 interface CatDetailPageProps {
-    current?: any;
+    current?: object;
 }
 
 const CatDetailPage = ({ current }: CatDetailPageProps) => {
@@ -18,7 +18,7 @@ const CatDetailPage = ({ current }: CatDetailPageProps) => {
         if (!current && params?.id && params.id !== currentCat.id) {
             router.push('/cats');
         }
-    }, [params?.id, currentCat.id, router]);
+    }, [params?.id, currentCat.id, router, current]);
 
     return (
         <div className="container mx-auto px-4 py-10">
