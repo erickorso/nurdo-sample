@@ -41,7 +41,7 @@ async function getUser(id: string): Promise<UserDetail | null> {
     }
 
     return res.json()
-  } catch (error) {
+  } catch {
     return null
   }
 }
@@ -161,7 +161,7 @@ export default async function UserDetailPage({
           <CardContent className="space-y-4">
             <div>
               <p className="font-medium text-lg">{user.company.name}</p>
-              <p className="text-muted-foreground italic">"{user.company.catchPhrase}"</p>
+              <p className="text-muted-foreground italic">&quot;{user.company.catchPhrase}&quot;</p>
             </div>
 
             <Separator />

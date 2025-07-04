@@ -81,7 +81,7 @@ export default async function UsersPage() {
                 </div>
                 <div className="pt-2 border-t">
                   <p className="text-sm font-medium">{user.company.name}</p>
-                  <p className="text-xs text-muted-foreground italic">"{user.company.catchPhrase}"</p>
+                  <p className="text-xs text-muted-foreground italic">&quot;{user.company.catchPhrase}&quot;</p>
                 </div>
               </CardContent>
             </Card>
