@@ -12,7 +12,7 @@ interface CurrentProps {
     height: number
 }
 
-const CatDetailPage = ({ current }: { current?: CurrentProps}) => {
+const CatDetailPage = ({ current }: { current: CurrentProps}) => {
     const params = useParams<{ id: string }>();
     const currentCat = JSON.parse(localStorage.getItem("currentCat") || "{}");
     const router = useRouter();
