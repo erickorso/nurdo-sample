@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Pagination from "../components/Pagination";
 import Modal from "../components/Modal";
-import CatDetailPage from "./[id]/page";
+import CatDetailPage from "./[id]/CatDetailPage";
 import { useRouter } from "next/navigation";
 
 /* 
